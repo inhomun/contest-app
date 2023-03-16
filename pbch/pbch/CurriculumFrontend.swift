@@ -1,13 +1,13 @@
 //
-//  CurriculumJavaView.swift
+//  CurriculumFrontend.swift
 //  pbch
 //
-//  Created by 문인호 on 2023/03/13.
+//  Created by 문인호 on 2023/03/16.
 //
 
 import SwiftUI
 
-struct CurriculumJavaView: View {
+struct CurriculumFrontend: View {
     @State var showModal: Bool = false
     var body: some View {
         NavigationView {
@@ -29,7 +29,7 @@ struct CurriculumJavaView: View {
                                 }
                                 HStack{
                                     Spacer().frame(width: 40, height: 10)
-                                    Text("자바프로그래밍 > ")
+                                    Text("자바프로그래밍, 웹개발입문 > 프론트엔드개발 ")
                                         .font(.system(size: 10))
                                         .padding()
                                 }
@@ -59,13 +59,13 @@ struct CurriculumJavaView: View {
                                     }
                                 }, label:
                                         {
-                                    Text("프론트엔드개발")
+                                    Text("웹프로그래밍")
                                 })
                                 .buttonStyle(redSubjecButton())
                                 NavigationLink {
                                     CurriculumJavaView()
                                 } label: {
-                                    Text("웹프로그래밍")
+                                    Text("모바일프로그래밍")
                                 }
                                 .buttonStyle(redSubjecButton())
                                 Spacer()
@@ -75,25 +75,16 @@ struct CurriculumJavaView: View {
                                 NavigationLink {
                                     CurriculumJavaView()
                                 } label: {
-                                    Text("모바일프로그래밍")
-                                }
-                                .buttonStyle(redSubjecButton())
-                                NavigationLink {
-                                    CurriculumJavaView()
-                                } label: {
                                     Text("자바프로젝트")
                                 }
                                 .buttonStyle(redSubjecButton())
-                                Spacer()
-                            }
-                            HStack{
-                                Spacer().frame(width: 43, height: 10)
                                 NavigationLink {
                                     CurriculumJavaView()
                                 } label: {
                                     Text("고급자바")
                                 }
                                 .buttonStyle(redSubjecButton())
+                                Spacer()
                             }
                         }
                     
@@ -119,9 +110,9 @@ struct CurriculumJavaView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         }
     }
-struct CurriculumJavaView_Previews: PreviewProvider {
+
+struct CurriculumFrontend_Previews: PreviewProvider {
     static var previews: some View {
-        CurriculumJavaView()
+        CurriculumFrontend()
     }
 }
-

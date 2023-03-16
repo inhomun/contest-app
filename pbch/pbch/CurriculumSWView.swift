@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct CurriculumSWView: View {
+    
     var body: some View {
+
         ScrollView{
             VStack(spacing: 50){
                 Image("skhuazbanner")

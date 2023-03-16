@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E341C0F029C2B88B0063B556 /* CurriculumFrontend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E341C0EF29C2B88B0063B556 /* CurriculumFrontend.swift */; };
 		E348FAAF29BF47A400FFF107 /* pbchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E348FAAE29BF47A400FFF107 /* pbchApp.swift */; };
 		E348FAB129BF47A400FFF107 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E348FAB029BF47A400FFF107 /* ContentView.swift */; };
 		E348FAB329BF47A600FFF107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E348FAB229BF47A600FFF107 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E341C0EF29C2B88B0063B556 /* CurriculumFrontend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumFrontend.swift; sourceTree = "<group>"; };
 		E348FAAB29BF47A400FFF107 /* pbch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pbch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E348FAAE29BF47A400FFF107 /* pbchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pbchApp.swift; sourceTree = "<group>"; };
 		E348FAB029BF47A400FFF107 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				E348FACA29BF4B2000FFF107 /* CurriculumView.swift */,
 				E348FACC29BF4B3400FFF107 /* CurriculumSWView.swift */,
 				E348FACE29BF4B4900FFF107 /* CurriculumJavaView.swift */,
+				E341C0EF29C2B88B0063B556 /* CurriculumFrontend.swift */,
 				E348FAD029BF4B5C00FFF107 /* warningAlertView.swift */,
 				E348FAD229BF4B6C00FFF107 /* MainView.swift */,
 				E348FAD429BF4B7A00FFF107 /* RootView.swift */,
@@ -213,6 +216,7 @@
 				E348FACF29BF4B4900FFF107 /* CurriculumJavaView.swift in Sources */,
 				E348FAE129BF4C1200FFF107 /* communityRuleView.swift in Sources */,
 				E348FABF29BF4AA300FFF107 /* LoginView.swift in Sources */,
+				E341C0F029C2B88B0063B556 /* CurriculumFrontend.swift in Sources */,
 				E348FAAF29BF47A400FFF107 /* pbchApp.swift in Sources */,
 				E348FAE329BF4C1D00FFF107 /* quitAccountView.swift in Sources */,
 				E348FACD29BF4B3400FFF107 /* CurriculumSWView.swift in Sources */,

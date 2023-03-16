@@ -24,7 +24,8 @@ extension Color {
 }
 extension Color {
  
-    static let mainButtonColor = Color(hex: "#C28D8D")
+    static let pointColorR = Color(hex: "#C28D8D")
+    static let pointColorB = Color(hex: "#9AC1D1")
 }
 
 struct redButton: ButtonStyle {
@@ -33,10 +34,10 @@ struct redButton: ButtonStyle {
             .frame(width: UIScreen.main.bounds.width / 3.0 , height: UIScreen.main.bounds.height / 10.0)
             .padding()
             .background(Color.white)
-            .foregroundColor(.mainButtonColor)
+            .foregroundColor(.pointColorR)
             .clipShape(Rectangle())
             .overlay { // <-
-                Rectangle().stroke(Color.mainButtonColor, lineWidth: 5)
+                Rectangle().stroke(Color.pointColorR, lineWidth: 5)
             .cornerRadius(5)
               }
             .font(.system(size: 15, weight: .semibold))
@@ -44,23 +45,16 @@ struct redButton: ButtonStyle {
     }
 }
 
-extension Color {
- 
-    static let edgeColor = Color(hex: "#C2E7F5")
-    static let highlightedgeColor = Color(hex: "#1CA6DE")
-    static let highlihtFillColor = Color(hex: "#C2E7F5")
-
-    }
 struct redSubjecButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(width: UIScreen.main.bounds.width / 3.0 , height: UIScreen.main.bounds.height / 13.0)
             .padding()
             .background(Color.white)
-            .foregroundColor(.mainButtonColor)
+            .foregroundColor(.pointColorR)
             .clipShape(Rectangle())
             .overlay { // <-
-                Rectangle().stroke(Color.mainButtonColor, lineWidth: 5)
+                Rectangle().stroke(Color.pointColorR, lineWidth: 5)
               }
             .cornerRadius(5)
             .font(.system(size: 15, weight: .semibold))
@@ -72,11 +66,11 @@ struct highlightButton: ButtonStyle {
         configuration.label
             .frame(width: UIScreen.main.bounds.width / 3.0 , height: UIScreen.main.bounds.height / 30.0)
             .padding()
-            .background(Color.mainButtonColor)
+            .background(Color.pointColorR)
             .foregroundColor(.white)
             .clipShape(Rectangle())
             .overlay { // <-
-                Rectangle().stroke(Color.mainButtonColor, lineWidth: 5)
+                Rectangle().stroke(Color.pointColorR, lineWidth: 5)
               }
             .cornerRadius(5)
             .font(.system(size: 12, weight: .semibold))
@@ -96,5 +90,38 @@ struct redSettingecButton: ButtonStyle {
             .cornerRadius(5)
             .font(.system(size: 15, weight: .semibold))
         
+    }
+}
+struct modalCancelButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width: UIScreen.main.bounds.width / 4.0 , height: UIScreen.main.bounds.height / 30.0)
+            .padding()
+            .background(Color.white)
+            .foregroundColor(.black)
+            .clipShape(Rectangle())
+            .overlay { // <-
+                Rectangle().stroke(Color.pointColorB, lineWidth: 5)
+              }
+            .cornerRadius(10)
+            .font(.system(size: 15, weight: .semibold))
+
+    }
+}
+struct modalConfirmButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width: UIScreen.main.bounds.width / 4.0 , height: UIScreen.main.bounds.height / 30.0)
+            .padding()
+            .background(Color.pointColorB)
+            .foregroundColor(.white)
+            .clipShape(Rectangle())
+            .cornerRadius(10)
+            .overlay { // <-
+                Rectangle().stroke(Color.pointColorB, lineWidth: 5)
+              }
+            .cornerRadius(10)
+            .font(.system(size: 15, weight: .semibold))
+
     }
 }
