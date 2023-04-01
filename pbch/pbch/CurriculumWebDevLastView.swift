@@ -1,13 +1,13 @@
 //
-//  CurriculumFrontend.swift
+//  CurriculumWebDevLastView.swift
 //  pbch
 //
-//  Created by 문인호 on 2023/03/16.
+//  Created by 문인호 on 2023/03/23.
 //
 
 import SwiftUI
 
-struct CurriculumFrontend: View {
+struct CurriculumWebDevLastView: View {
     @State var showModal: Bool = false
     var body: some View {
         NavigationView {
@@ -29,27 +29,23 @@ struct CurriculumFrontend: View {
                                 }
                                 HStack{
                                     Spacer().frame(width: 40, height: 10)
-                                    Text("자바 프로그래밍, 웹개발입문 > ")
+                                    Text("웹개발입문 > 웹프로그래밍 > ")
                                         .font(.system(size: 10))
                                         .padding()
-                                    Button {
-                                        print("hello world")
-                                    } label: {
-                                        Text("루트저장")
-                                    }
-                                    .buttonStyle(redRouteConfirmButton())
-
                                 }
                             }
                         }
-                        HStack(spacing: 20){
-                            Spacer()
-                            NavigationLink {
-                                CurriculumJavaView()
-                            } label: {
-                                Text("프론트엔드프레임워크")
-                            }
-                            .buttonStyle(redSubjecButton())
+                            HStack(spacing: 20){
+                                Spacer()
+                                Button(action: {
+                                    withAnimation {
+                                        self.showModal.toggle()
+                                    }
+                                }, label:
+                                        {
+                                    Text(backendFramework.name)
+                                })
+                                .buttonStyle(redSubjecButton())
                                 Spacer()
                             }
                         }
@@ -77,8 +73,8 @@ struct CurriculumFrontend: View {
         }
     }
 
-struct CurriculumFrontend_Previews: PreviewProvider {
+struct CurriculumWebDevLastView_Previews: PreviewProvider {
     static var previews: some View {
-        CurriculumFrontend()
+        CurriculumWebDevLastView()
     }
 }

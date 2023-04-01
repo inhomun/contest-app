@@ -91,7 +91,7 @@ struct CurriculumJavaView: View {
                                 NavigationLink {
                                     CurriculumJavaView()
                                 } label: {
-                                    Text("고급자바")
+                                    Text("고급자바프로그래밍")
                                 }
                                 .buttonStyle(redSubjecButton())
                             }

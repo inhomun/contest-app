@@ -32,6 +32,14 @@
 		E348FADF29BF4C0000FFF107 /* setModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E348FADE29BF4C0000FFF107 /* setModeView.swift */; };
 		E348FAE129BF4C1200FFF107 /* communityRuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E348FAE029BF4C1200FFF107 /* communityRuleView.swift */; };
 		E348FAE329BF4C1D00FFF107 /* quitAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E348FAE229BF4C1D00FFF107 /* quitAccountView.swift */; };
+		E3593DE029CAFE84009A57EE /* CurriculumWebDevView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593DDF29CAFE84009A57EE /* CurriculumWebDevView.swift */; };
+		E3593DFE29CB1C67009A57EE /* subjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593DFD29CB1C67009A57EE /* subjectModel.swift */; };
+		E3593E0029CC75D1009A57EE /* CurriculumWebDevLastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593DFF29CC75D1009A57EE /* CurriculumWebDevLastView.swift */; };
+		E3593E0229CD9510009A57EE /* CurriculumPythonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593E0129CD9510009A57EE /* CurriculumPythonView.swift */; };
+		E3593E0429CD95A6009A57EE /* CurriculumDBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593E0329CD95A6009A57EE /* CurriculumDBView.swift */; };
+		E3593E0629CD95E6009A57EE /* CurriculumDCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593E0529CD95E6009A57EE /* CurriculumDCView.swift */; };
+		E3593E0829CD9614009A57EE /* CurriculumOSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593E0729CD9614009A57EE /* CurriculumOSView.swift */; };
+		E3593E0A29CD9633009A57EE /* CurriculumIOTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593E0929CD9633009A57EE /* CurriculumIOTView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +69,14 @@
 		E348FADE29BF4C0000FFF107 /* setModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setModeView.swift; sourceTree = "<group>"; };
 		E348FAE029BF4C1200FFF107 /* communityRuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = communityRuleView.swift; sourceTree = "<group>"; };
 		E348FAE229BF4C1D00FFF107 /* quitAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quitAccountView.swift; sourceTree = "<group>"; };
+		E3593DDF29CAFE84009A57EE /* CurriculumWebDevView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumWebDevView.swift; sourceTree = "<group>"; };
+		E3593DFD29CB1C67009A57EE /* subjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subjectModel.swift; sourceTree = "<group>"; };
+		E3593DFF29CC75D1009A57EE /* CurriculumWebDevLastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumWebDevLastView.swift; sourceTree = "<group>"; };
+		E3593E0129CD9510009A57EE /* CurriculumPythonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumPythonView.swift; sourceTree = "<group>"; };
+		E3593E0329CD95A6009A57EE /* CurriculumDBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumDBView.swift; sourceTree = "<group>"; };
+		E3593E0529CD95E6009A57EE /* CurriculumDCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumDCView.swift; sourceTree = "<group>"; };
+		E3593E0729CD9614009A57EE /* CurriculumOSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumOSView.swift; sourceTree = "<group>"; };
+		E3593E0929CD9633009A57EE /* CurriculumIOTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumIOTView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +121,15 @@
 				E348FACA29BF4B2000FFF107 /* CurriculumView.swift */,
 				E348FACC29BF4B3400FFF107 /* CurriculumSWView.swift */,
 				E348FACE29BF4B4900FFF107 /* CurriculumJavaView.swift */,
+				E3593DDF29CAFE84009A57EE /* CurriculumWebDevView.swift */,
+				E3593E0129CD9510009A57EE /* CurriculumPythonView.swift */,
+				E3593E0329CD95A6009A57EE /* CurriculumDBView.swift */,
+				E3593E0529CD95E6009A57EE /* CurriculumDCView.swift */,
+				E3593E0729CD9614009A57EE /* CurriculumOSView.swift */,
+				E3593E0929CD9633009A57EE /* CurriculumIOTView.swift */,
+				E3593DFF29CC75D1009A57EE /* CurriculumWebDevLastView.swift */,
 				E341C0EF29C2B88B0063B556 /* CurriculumFrontend.swift */,
+				E3593DFD29CB1C67009A57EE /* subjectModel.swift */,
 				E348FAD029BF4B5C00FFF107 /* warningAlertView.swift */,
 				E348FAD229BF4B6C00FFF107 /* MainView.swift */,
 				E348FAD429BF4B7A00FFF107 /* RootView.swift */,
@@ -200,19 +224,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3593E0A29CD9633009A57EE /* CurriculumIOTView.swift in Sources */,
 				E348FADB29BF4BDB00FFF107 /* editProfileView.swift in Sources */,
+				E3593E0429CD95A6009A57EE /* CurriculumDBView.swift in Sources */,
 				E348FAC729BF4AF300FFF107 /* CustomDropdownMenu.swift in Sources */,
 				E348FAD329BF4B6C00FFF107 /* MainView.swift in Sources */,
 				E348FAC929BF4B0B00FFF107 /* extensionPalette.swift in Sources */,
 				E348FAC129BF4AB700FFF107 /* Find_UserData.swift in Sources */,
 				E348FACB29BF4B2000FFF107 /* CurriculumView.swift in Sources */,
+				E3593E0029CC75D1009A57EE /* CurriculumWebDevLastView.swift in Sources */,
+				E3593DE029CAFE84009A57EE /* CurriculumWebDevView.swift in Sources */,
 				E348FAD729BF4BAB00FFF107 /* SettingView.swift in Sources */,
 				E348FAC329BF4ACC00FFF107 /* SignUp.swift in Sources */,
 				E348FAD129BF4B5C00FFF107 /* warningAlertView.swift in Sources */,
 				E348FAD929BF4BCB00FFF107 /* authView.swift in Sources */,
 				E348FABD29BF4A8F00FFF107 /* TabbarView.swift in Sources */,
 				E348FAB129BF47A400FFF107 /* ContentView.swift in Sources */,
+				E3593E0229CD9510009A57EE /* CurriculumPythonView.swift in Sources */,
 				E348FADF29BF4C0000FFF107 /* setModeView.swift in Sources */,
+				E3593E0629CD95E6009A57EE /* CurriculumDCView.swift in Sources */,
 				E348FACF29BF4B4900FFF107 /* CurriculumJavaView.swift in Sources */,
 				E348FAE129BF4C1200FFF107 /* communityRuleView.swift in Sources */,
 				E348FABF29BF4AA300FFF107 /* LoginView.swift in Sources */,
@@ -222,6 +252,8 @@
 				E348FACD29BF4B3400FFF107 /* CurriculumSWView.swift in Sources */,
 				E348FAC529BF4AE100FFF107 /* EvaluationView.swift in Sources */,
 				E348FAD529BF4B7A00FFF107 /* RootView.swift in Sources */,
+				E3593E0829CD9614009A57EE /* CurriculumOSView.swift in Sources */,
+				E3593DFE29CB1C67009A57EE /* subjectModel.swift in Sources */,
 				E348FADD29BF4BF100FFF107 /* setalarmView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -125,3 +125,19 @@ struct modalConfirmButton: ButtonStyle {
 
     }
 }
+struct redRouteConfirmButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width: UIScreen.main.bounds.width / 8.0 , height: UIScreen.main.bounds.height / 60.0)
+            .padding()
+            .background(Color.pointColorR)
+            .foregroundColor(.white)
+            .clipShape(Rectangle())
+            .overlay { // <-
+                Rectangle().stroke(Color.pointColorR, lineWidth: 5)
+              }
+            .cornerRadius(5)
+            .font(.system(size: 12, weight: .semibold))
+
+    }
+}

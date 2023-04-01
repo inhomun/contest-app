@@ -168,7 +168,6 @@ struct TextInputView: View {
                         .lineLimit(2)
                     Spacer()
                 }
-                
             }
             .padding(.bottom, 16)// 학번 중복확인 HStack
             VStack(spacing: 15){ // 비밀번호 입력 받는 SecureField
@@ -186,7 +185,6 @@ struct TextInputView: View {
                         }
                     }
                     .padding(.bottom, 30)// 학번 중복확인 HStack
-
                 VStack(spacing: 5){ // 비밀번호 입력 확인 안내문구와 SecureField
                     SecureField("비밀번호를 한번 더 입력해주세요*", text: $RepeatedPassword)
                         .padding()

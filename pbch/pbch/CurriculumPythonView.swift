@@ -1,13 +1,13 @@
 //
-//  CurriculumFrontend.swift
+//  CurriculumPythonView.swift
 //  pbch
 //
-//  Created by 문인호 on 2023/03/16.
+//  Created by 문인호 on 2023/03/24.
 //
 
 import SwiftUI
 
-struct CurriculumFrontend: View {
+struct CurriculumPythonView: View {
     @State var showModal: Bool = false
     var body: some View {
         NavigationView {
@@ -29,16 +29,9 @@ struct CurriculumFrontend: View {
                                 }
                                 HStack{
                                     Spacer().frame(width: 40, height: 10)
-                                    Text("자바 프로그래밍, 웹개발입문 > ")
+                                    Text("파이썬 > ")
                                         .font(.system(size: 10))
                                         .padding()
-                                    Button {
-                                        print("hello world")
-                                    } label: {
-                                        Text("루트저장")
-                                    }
-                                    .buttonStyle(redRouteConfirmButton())
-
                                 }
                             }
                         }
@@ -47,38 +40,36 @@ struct CurriculumFrontend: View {
                             NavigationLink {
                                 CurriculumJavaView()
                             } label: {
-                                Text("프론트엔드프레임워크")
+                                Text("파이썬 프로젝트")
                             }
                             .buttonStyle(redSubjecButton())
-                                Spacer()
-                            }
+                            Spacer()
                         }
-                    
+                        
                     }
-                if showModal {
-                    Rectangle() // the semi-transparent overlay
-                        .foregroundColor(Color.black.opacity(0.5))
-                        .edgesIgnoringSafeArea(.all)
-
-                    GeometryReader { geometry in // the modal container
-                        RoundedRectangle(cornerRadius: 16)
-                            .foregroundColor(.white)
-                            .frame(width: geometry.size.width/5*4, height: geometry.size.height/3, alignment: .center)
-                            .overlay(warningAlertView(showModal: self.$showModal))
-                            .shadow(color: Color.gray.opacity(0.4), radius: 4)
-                            .position(x: geometry.size.width/2, y : geometry.size.height/2)
+                    if showModal {
+                        Rectangle() // the semi-transparent overlay
+                            .foregroundColor(Color.black.opacity(0.5))
+                            .edgesIgnoringSafeArea(.all)
+                        
+                        GeometryReader { geometry in // the modal container
+                            RoundedRectangle(cornerRadius: 16)
+                                .foregroundColor(.white)
+                                .frame(width: geometry.size.width/5*4, height: geometry.size.height/3, alignment: .center)
+                                .overlay(warningAlertView(showModal: self.$showModal))
+                                .shadow(color: Color.gray.opacity(0.4), radius: 4)
+                                .position(x: geometry.size.width/2, y : geometry.size.height/2)
+                        }
+                        .transition(.move(edge: .bottom))
                     }
-                    .transition(.move(edge: .bottom))
                 }
-                
+                .navigationViewStyle(StackNavigationViewStyle())
             }
-            }
-        .navigationViewStyle(StackNavigationViewStyle())
         }
     }
-
-struct CurriculumFrontend_Previews: PreviewProvider {
+}
+struct CurriculumPythonView_Previews: PreviewProvider {
     static var previews: some View {
-        CurriculumFrontend()
+        CurriculumPythonView()
     }
 }

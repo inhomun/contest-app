@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CurriculumSWView: View {
-    
     var body: some View {
 
         ScrollView{
