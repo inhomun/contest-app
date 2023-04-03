@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct CurriculumWebDevView: View {
+    @State var isHP: Bool = false
     @State var showModal: Bool = false
+    @State var isWP: Bool = false
     var body: some View {
         NavigationView {
             ZStack{
                 ScrollView{
-                    VStack(alignment: .leading, spacing: 50){
+                    VStack( alignment: .leading, spacing: 50){
                         Image("skhuazbanner")
                             .ignoresSafeArea()
                         VStack(alignment: .leading, spacing: 1){
@@ -46,28 +48,34 @@ struct CurriculumWebDevView: View {
                                     Text(frontendDevelop.name)
                                 })
                                 .buttonStyle(redSubjecButton())
-                                NavigationLink {
-                                    CurriculumJavaView()
-                                } label: {
+                                Button(action: {
+                                    withAnimation {
+                                        self.isWP.toggle()
+                                    }
+                                }, label:
+                                        {
                                     Text(webProgramming.name)
-                                }
+                                })
                                 .buttonStyle(redSubjecButton())
                                 Spacer()
                             }
                             HStack{
                                 Spacer().frame(width: 43, height: 10)
-                                NavigationLink {
-                                    CurriculumJavaView()
-                                } label: {
+                                Button(action: {
+                                    withAnimation {
+                                        self.isHP.toggle()
+                                    }
+                                }, label:
+                                        {
                                     Text(hybridProgramming.name)
                                         .multilineTextAlignment(.center)
-                                }
+                                })
                                 .buttonStyle(redSubjecButton())
                             }
                         }
                     
                     }
-                if showModal {
+                if (showModal) {
                     Rectangle() // the semi-transparent overlay
                         .foregroundColor(Color.black.opacity(0.5))
                         .edgesIgnoringSafeArea(.all)
@@ -82,6 +90,37 @@ struct CurriculumWebDevView: View {
                     }
                     .transition(.move(edge: .bottom))
                 }
+                else if isHP {
+                    Rectangle() // the semi-transparent overlay
+                        .foregroundColor(Color.black.opacity(0.5))
+                        .edgesIgnoringSafeArea(.all)
+
+                    GeometryReader { geometry in // the modal container
+                        RoundedRectangle(cornerRadius: 16)
+                            .foregroundColor(.white)
+                            .frame(width: geometry.size.width/5*4, height: geometry.size.height/3, alignment: .center)
+                            .overlay(dataSaveHA(isHP: self.$isHP))
+                            .shadow(color: Color.gray.opacity(0.4), radius: 4)
+                            .position(x: geometry.size.width/2, y : geometry.size.height/2)
+                    }
+                    .transition(.move(edge: .bottom))
+                }
+                else if isWP {
+                    Rectangle() // the semi-transparent overlay
+                        .foregroundColor(Color.black.opacity(0.5))
+                        .edgesIgnoringSafeArea(.all)
+
+                    GeometryReader { geometry in // the modal container
+                        RoundedRectangle(cornerRadius: 16)
+                            .foregroundColor(.white)
+                            .frame(width: geometry.size.width/5*4, height: geometry.size.height/3, alignment: .center)
+                            .overlay(warningWP(isWP: self.$isWP))
+                            .shadow(color: Color.gray.opacity(0.4), radius: 4)
+                            .position(x: geometry.size.width/2, y : geometry.size.height/2)
+                    }
+                    .transition(.move(edge: .bottom))
+                }
+
                 
             }
             }
@@ -94,3 +133,37 @@ struct CurriculumWebDevView_Previews: PreviewProvider {
         CurriculumWebDevView()
     }
 }
+
+struct dataSaveHA: View {
+    @Binding var isHP: Bool
+
+    var body: some View {
+        VStack {
+            Text(hybridProgramming.name)
+                .font(.system(size: 20,weight: .semibold,design: .default))
+                .foregroundColor(.pointColorR)
+            Text(" ")
+            Text("해당 과목은 커리큘럼의 마지막 과목입니다.")
+            Text("해당 과목을 선택하면 자동으로 루트가 저장됩니다.")
+            Text("해당 과목을 추가하시겠습니까?")
+            HStack(spacing: 30){
+                Button(action: {
+                withAnimation {
+                    self.isHP.toggle()
+                }
+                }, label: {
+                    Text("취소")
+                })
+                .buttonStyle(modalCancelButton())
+                Button(action: {
+                withAnimation {
+                    
+                }
+                }, label: {
+                    Text("선택")
+                })
+                    .buttonStyle(modalConfirmButton())
+                }
+            }
+        }
+    }

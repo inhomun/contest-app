@@ -40,6 +40,7 @@
 		E3593E0629CD95E6009A57EE /* CurriculumDCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593E0529CD95E6009A57EE /* CurriculumDCView.swift */; };
 		E3593E0829CD9614009A57EE /* CurriculumOSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593E0729CD9614009A57EE /* CurriculumOSView.swift */; };
 		E3593E0A29CD9633009A57EE /* CurriculumIOTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593E0929CD9633009A57EE /* CurriculumIOTView.swift */; };
+		E3593E0F29DB1AAD009A57EE /* CurriculumDataStructurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3593E0E29DB1AAD009A57EE /* CurriculumDataStructurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		E3593E0529CD95E6009A57EE /* CurriculumDCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumDCView.swift; sourceTree = "<group>"; };
 		E3593E0729CD9614009A57EE /* CurriculumOSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumOSView.swift; sourceTree = "<group>"; };
 		E3593E0929CD9633009A57EE /* CurriculumIOTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumIOTView.swift; sourceTree = "<group>"; };
+		E3593E0E29DB1AAD009A57EE /* CurriculumDataStructurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumDataStructurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				E348FACA29BF4B2000FFF107 /* CurriculumView.swift */,
 				E348FACC29BF4B3400FFF107 /* CurriculumSWView.swift */,
 				E348FACE29BF4B4900FFF107 /* CurriculumJavaView.swift */,
+				E3593E0E29DB1AAD009A57EE /* CurriculumDataStructurView.swift */,
 				E3593DDF29CAFE84009A57EE /* CurriculumWebDevView.swift */,
 				E3593E0129CD9510009A57EE /* CurriculumPythonView.swift */,
 				E3593E0329CD95A6009A57EE /* CurriculumDBView.swift */,
@@ -238,6 +241,7 @@
 				E348FAC329BF4ACC00FFF107 /* SignUp.swift in Sources */,
 				E348FAD129BF4B5C00FFF107 /* warningAlertView.swift in Sources */,
 				E348FAD929BF4BCB00FFF107 /* authView.swift in Sources */,
+				E3593E0F29DB1AAD009A57EE /* CurriculumDataStructurView.swift in Sources */,
 				E348FABD29BF4A8F00FFF107 /* TabbarView.swift in Sources */,
 				E348FAB129BF47A400FFF107 /* ContentView.swift in Sources */,
 				E3593E0229CD9510009A57EE /* CurriculumPythonView.swift in Sources */,

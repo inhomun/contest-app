@@ -26,6 +26,7 @@ class subject: ObservableObject{
 }
 
 var javaProgramming = subject(name: "자바 프로그래밍", depth: 1)
+var networkProgramming = subject(name: "네트워크 프로그래밍", depth: 1)
 var dataStructure = subject(name: "자료구조", depth: 2)
 var algorithm = subject(name: "알고리즘", depth: 3)
 var mobileProgramming = subject(name: "모바일프로그래밍", depth: 3, prerequisite: webIntroduction)

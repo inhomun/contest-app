@@ -32,25 +32,21 @@ struct CurriculumFrontend: View {
                                     Text("자바 프로그래밍, 웹개발입문 > ")
                                         .font(.system(size: 10))
                                         .padding()
-                                    Button {
-                                        print("hello world")
-                                    } label: {
-                                        Text("루트저장")
-                                    }
-                                    .buttonStyle(redRouteConfirmButton())
-
                                 }
                             }
                         }
                         HStack(spacing: 20){
                             Spacer()
-                            NavigationLink {
-                                CurriculumJavaView()
-                            } label: {
-                                Text("프론트엔드프레임워크")
-                            }
+                            Button(action: {
+                                withAnimation {
+                                    self.showModal.toggle()
+                                }
+                            }, label:
+                                    {
+                                Text("프론트엔드 프레임워크")
+                            })
                             .buttonStyle(redSubjecButton())
-                                Spacer()
+                            Spacer()
                             }
                         }
                     
@@ -64,7 +60,7 @@ struct CurriculumFrontend: View {
                         RoundedRectangle(cornerRadius: 16)
                             .foregroundColor(.white)
                             .frame(width: geometry.size.width/5*4, height: geometry.size.height/3, alignment: .center)
-                            .overlay(warningAlertView(showModal: self.$showModal))
+                            .overlay(dataSaveFWF(showModal: self.$showModal))
                             .shadow(color: Color.gray.opacity(0.4), radius: 4)
                             .position(x: geometry.size.width/2, y : geometry.size.height/2)
                     }
@@ -82,3 +78,37 @@ struct CurriculumFrontend_Previews: PreviewProvider {
         CurriculumFrontend()
     }
 }
+
+struct dataSaveFWF: View {
+    @Binding var showModal: Bool
+
+    var body: some View {
+        VStack {
+            Text("프론트엔드 프레임워크")
+                .font(.system(size: 20,weight: .semibold,design: .default))
+                .foregroundColor(.pointColorR)
+            Text(" ")
+            Text("해당 과목은 커리큘럼의 마지막 과목입니다.")
+            Text("해당 과목을 선택하면 자동으로 루트가 저장됩니다.")
+            Text("해당 과목을 추가하시겠습니까?")
+            HStack(spacing: 30){
+                Button(action: {
+                withAnimation {
+                    self.showModal.toggle()
+                }
+                }, label: {
+                    Text("취소")
+                })
+                .buttonStyle(modalCancelButton())
+                Button(action: {
+                withAnimation {
+                    
+                }
+                }, label: {
+                    Text("선택")
+                })
+                    .buttonStyle(modalConfirmButton())
+                }
+            }
+        }
+    }

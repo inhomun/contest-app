@@ -37,16 +37,20 @@ struct CurriculumPythonView: View {
                         }
                         HStack(spacing: 20){
                             Spacer()
-                            NavigationLink {
-                                CurriculumJavaView()
-                            } label: {
-                                Text("파이썬 프로젝트")
-                            }
+                            Button(action: {
+                                withAnimation {
+                                    self.showModal.toggle()
+                                }
+                            }, label:
+                                    {
+                                Text(pythonProject.name)
+                            })
                             .buttonStyle(redSubjecButton())
                             Spacer()
                         }
                         
                     }
+                }
                     if showModal {
                         Rectangle() // the semi-transparent overlay
                             .foregroundColor(Color.black.opacity(0.5))
@@ -56,15 +60,14 @@ struct CurriculumPythonView: View {
                             RoundedRectangle(cornerRadius: 16)
                                 .foregroundColor(.white)
                                 .frame(width: geometry.size.width/5*4, height: geometry.size.height/3, alignment: .center)
-                                .overlay(warningAlertView(showModal: self.$showModal))
+                                .overlay(dataSavePython(showModal: self.$showModal))
                                 .shadow(color: Color.gray.opacity(0.4), radius: 4)
                                 .position(x: geometry.size.width/2, y : geometry.size.height/2)
                         }
                         .transition(.move(edge: .bottom))
                     }
-                }
-                .navigationViewStyle(StackNavigationViewStyle())
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }
@@ -73,3 +76,38 @@ struct CurriculumPythonView_Previews: PreviewProvider {
         CurriculumPythonView()
     }
 }
+
+
+struct dataSavePython: View {
+    @Binding var showModal: Bool
+
+    var body: some View {
+        VStack {
+            Text(pythonProject.name)
+                .font(.system(size: 20,weight: .semibold,design: .default))
+                .foregroundColor(.pointColorR)
+            Text(" ")
+            Text("해당 과목은 커리큘럼의 마지막 과목입니다.")
+            Text("해당 과목을 선택하면 자동으로 루트가 저장됩니다.")
+            Text("해당 과목을 추가하시겠습니까?")
+            HStack(spacing: 30){
+                Button(action: {
+                withAnimation {
+                    self.showModal.toggle()
+                }
+                }, label: {
+                    Text("취소")
+                })
+                .buttonStyle(modalCancelButton())
+                Button(action: {
+                withAnimation {
+                    
+                }
+                }, label: {
+                    Text("선택")
+                })
+                    .buttonStyle(modalConfirmButton())
+                }
+            }
+        }
+    }
