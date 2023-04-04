@@ -111,6 +111,8 @@
 		E348FAAD29BF47A400FFF107 /* pbch */ = {
 			isa = PBXGroup;
 			children = (
+				E38AFBCA29DC45CB00C3B23E /* ssetting */,
+				E38AFBC929DC45A100C3B23E /* curriculum */,
 				E348FAAE29BF47A400FFF107 /* pbchApp.swift */,
 				E348FAB029BF47A400FFF107 /* ContentView.swift */,
 				E348FABC29BF4A8F00FFF107 /* TabbarView.swift */,
@@ -120,6 +122,26 @@
 				E348FAC429BF4AE100FFF107 /* EvaluationView.swift */,
 				E348FAC629BF4AF300FFF107 /* CustomDropdownMenu.swift */,
 				E348FAC829BF4B0B00FFF107 /* extensionPalette.swift */,
+				E348FAD229BF4B6C00FFF107 /* MainView.swift */,
+				E348FAD429BF4B7A00FFF107 /* RootView.swift */,
+				E348FAB229BF47A600FFF107 /* Assets.xcassets */,
+				E348FAB429BF47A600FFF107 /* Preview Content */,
+			);
+			path = pbch;
+			sourceTree = "<group>";
+		};
+		E348FAB429BF47A600FFF107 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E348FAB529BF47A600FFF107 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E38AFBC929DC45A100C3B23E /* curriculum */ = {
+			isa = PBXGroup;
+			children = (
+				E348FAD029BF4B5C00FFF107 /* warningAlertView.swift */,
 				E348FACA29BF4B2000FFF107 /* CurriculumView.swift */,
 				E348FACC29BF4B3400FFF107 /* CurriculumSWView.swift */,
 				E348FACE29BF4B4900FFF107 /* CurriculumJavaView.swift */,
@@ -133,9 +155,13 @@
 				E3593DFF29CC75D1009A57EE /* CurriculumWebDevLastView.swift */,
 				E341C0EF29C2B88B0063B556 /* CurriculumFrontend.swift */,
 				E3593DFD29CB1C67009A57EE /* subjectModel.swift */,
-				E348FAD029BF4B5C00FFF107 /* warningAlertView.swift */,
-				E348FAD229BF4B6C00FFF107 /* MainView.swift */,
-				E348FAD429BF4B7A00FFF107 /* RootView.swift */,
+			);
+			path = curriculum;
+			sourceTree = "<group>";
+		};
+		E38AFBCA29DC45CB00C3B23E /* ssetting */ = {
+			isa = PBXGroup;
+			children = (
 				E348FAD629BF4BAB00FFF107 /* SettingView.swift */,
 				E348FAD829BF4BCB00FFF107 /* authView.swift */,
 				E348FADA29BF4BDB00FFF107 /* editProfileView.swift */,
@@ -143,18 +169,8 @@
 				E348FADE29BF4C0000FFF107 /* setModeView.swift */,
 				E348FAE029BF4C1200FFF107 /* communityRuleView.swift */,
 				E348FAE229BF4C1D00FFF107 /* quitAccountView.swift */,
-				E348FAB229BF47A600FFF107 /* Assets.xcassets */,
-				E348FAB429BF47A600FFF107 /* Preview Content */,
 			);
-			path = pbch;
-			sourceTree = "<group>";
-		};
-		E348FAB429BF47A600FFF107 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E348FAB529BF47A600FFF107 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			path = ssetting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
